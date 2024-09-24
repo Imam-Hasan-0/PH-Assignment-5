@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH-ASSIGMNENT-5</title>
+    <!-- daisyUI & tailwind cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <nav class="bg-[#F9F7F3] sticky inset-0">
+        <div class="flex justify-between p-5 w-10/12 mx-auto">
+            <!-- navbar button -->
+            <div class="bg-[#B4F461] rounded-lg px-6 py-3">
+                <button onclick="myFunction()" class="text-xl font-semibold">Blog</button>
+            </div>
+            <!-- navbar logo and name -->
+            <div class="flex">
+                <div class="">
+                    <img src="./assets/logo.png" alt="">
+                </div>
+                <h3 class="text-xl font-semibold pl-5 flex items-center">Donate Bangladesh</h3>
+            </div>
+            <!-- navbar amount -->
+            <div class="flex items-center">
+                <div>
+                    <img src="./assets/coin.png" alt="">
+                </div>
+                <p class="text-xl font-semibold pl-3 flex items-center">5500 BDT</p>
+            </div>
+        </div>
+
+    </nav>
+    <main>
+        <div class="w-10/12 mx-auto">
+            <h1 class="text-5xl font-bold my-10">Important FAQ</h1>
+            <!-- Accordion -->
+            <div class="join join-vertical w-full">
+                <!-- Accordion 1 -->
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                        <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage as a tree of objects, allowing developers to access, modify, and manipulate HTML and XML content dynamically using languages like JavaScript. The DOM enables interaction with elements, such as changing content, styles, or structure, without reloading the page.</p>
+                    </div>
+                </div>
+                <!-- Accordion 2 -->
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p>To select an element from the DOM, use document.getElementById(), document.querySelector(), or similar methods like getElementsByClassName().</p>
+                    </div>
+                </div>
+                <!-- Accordion 3 -->
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                    <div class="collapse-content">
+                        <p>Event delegation is a technique where a single event listener is added to a parent element to manage events from its child elements. It's useful because it improves performance by reducing the number of event listeners and simplifies handling dynamically added elements.</p>
+                    </div>
+                </div>
+                <!-- Accordion 4 -->
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <p>To manipulate an element's attributes, use setAttribute() or access properties like element.src. For styles, modify element.style or use classList for adding/removing CSS classes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
