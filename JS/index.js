@@ -140,4 +140,46 @@ document.getElementById('btn-add-money-feni').addEventListener('click', function
   document.getElementById('transaction-container').appendChild(historyItem)
 })
 
+// card 3
+
+document.getElementById('btn-add-money-Quota').addEventListener('click', function () {
+  const addMoneyInput = document.getElementById('input-add-money-Quota').value;
+  const sumDonation = document.getElementById('total-donation-Quota').innerText
+  const addMoneyNumber = parseInt(addMoneyInput)
+  const sumNumber = parseInt(sumDonation)
+
+  const myBalance = document.getElementById('avilableBalance').innerText
+  const myBalanceNumber = parseInt(myBalance)
+
+  if (isNaN(addMoneyNumber)) {
+    alert('Invalid Donation Amount')
+    return
+  }
+
+  if (addMoneyNumber > myBalanceNumber) {
+    alert('Insufficient Balance')
+    return
+  }
+
+  const newDonationBalance = sumNumber + addMoneyNumber;
+  const myNewBalance = myBalanceNumber - addMoneyNumber
+  document.getElementById('total-donation-Quota').innerText = newDonationBalance
+  document.getElementById('avilableBalance').innerText = myNewBalance
+
+  // popup
+  document.getElementById("popup").classList.remove("hidden");
+  document.getElementById("close-confirmation").addEventListener("click", function () {
+    document.getElementById("popup").classList.add("hidden");
+  });
+
+  const historyItem = document.createElement('div')
+  historyItem.className = 'w-10/12 mx-auto border-2 p-3 my-5';
+
+  historyItem.innerHTML = `
+    <p class="text-2xl font-medium">${addMoneyNumber} Taka Aid for Injured in the Quota Movement</p>
+    <p class="text-xs font-normal mt-2">Date: ${new Date()}</p>
+  `
+  document.getElementById('transaction-container').appendChild(historyItem)
+})
+
 
