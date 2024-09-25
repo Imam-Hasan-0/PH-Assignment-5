@@ -46,7 +46,7 @@ historyTab.addEventListener('click', function () {
   document.getElementById('transaction-section').classList.remove('hidden')
 })
 // *************   Click Donation button
-donationTab.addEventListener('click', function(){
+donationTab.addEventListener('click', function () {
   console.log('hsds');
   donationTab.classList.add("text-xl", "font-semibold", "bg-[#B4F461]", "rounded-lg", "px-6", "py-3")
 
@@ -63,16 +63,16 @@ document.getElementById('btn-add-money').addEventListener('click', function () {
   const sumDonation = document.getElementById('total-donation').innerText
   const addMoneyNumber = parseInt(addMoneyInput)
   const sumNumber = parseInt(sumDonation)
-  
+
   const myBalance = document.getElementById('avilableBalance').innerText
   const myBalanceNumber = parseInt(myBalance)
 
-  if(isNaN(addMoneyNumber)) {
+  if (isNaN(addMoneyNumber)) {
     alert('Invalid Donation Amount')
     return
   }
 
-  if(addMoneyNumber > myBalanceNumber){
+  if (addMoneyNumber > myBalanceNumber) {
     alert('Insufficient Balance')
     return
   }
@@ -82,26 +82,19 @@ document.getElementById('btn-add-money').addEventListener('click', function () {
   document.getElementById('total-donation').innerText = newDonationBalance
   document.getElementById('avilableBalance').innerText = myNewBalance
 
+  // popup
+  document.getElementById("popup").classList.remove("hidden");
+  document.getElementById("close-confirmation").addEventListener("click", function () {
+    document.getElementById("popup").classList.add("hidden");
+  });
+
   const historyItem = document.createElement('div')
   historyItem.className = 'w-10/12 mx-auto border-2 p-3 my-5';
 
-  historyItem.innerHTML=`
+  historyItem.innerHTML = `
     <p class="text-2xl font-medium">${addMoneyNumber} Taka Donate for Flood at Noakhali, Bangladesh</p>
     <p class="text-xs font-normal mt-2">Date: ${new Date()}</p>
   `
   document.getElementById('transaction-container').appendChild(historyItem)
-
-  // const h = document.createElement('p')
-  // h.classList.add()
-  // h.innerText = `
-  //   ${new Date().toLocaleDateString()}  
-  // `
-  // const p = document.createElement('p')
-  // p.classList.add('w-10/12', 'mx-auto', 'text-3xl', 'font-bold', 'border-2', 'p-3', 'my-5')
-  // p.innerText = `
-  // ${addMoneyNumber} Taka Donate for Flood at Noakhali, Bangladesh
-  // `;
-  // document.getElementById('transaction-container').appendChild(h)
-  // document.getElementById('transaction-container').appendChild(p)
 })
 
