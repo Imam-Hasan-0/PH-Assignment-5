@@ -82,11 +82,26 @@ document.getElementById('btn-add-money').addEventListener('click', function () {
   document.getElementById('total-donation').innerText = newDonationBalance
   document.getElementById('avilableBalance').innerText = myNewBalance
 
-  const p = document.createElement('p')
-  p.classList.add('w-10/12', 'mx-auto', 'text-3xl', 'font-bold', 'border-2', 'p-3', 'my-5')
-  p.innerText = `
-  ${addMoneyNumber} Taka Donate for Flood at Noakhali, Bangladesh
-  `;
-  document.getElementById('transaction-container').appendChild(p)
+  const historyItem = document.createElement('div')
+  historyItem.className = 'w-10/12 mx-auto border-2 p-3 my-5';
+
+  historyItem.innerHTML=`
+    <p class="text-2xl font-medium">${addMoneyNumber} Taka Donate for Flood at Noakhali, Bangladesh</p>
+    <p class="text-xs font-normal mt-2">Date: ${new Date()}</p>
+  `
+  document.getElementById('transaction-container').appendChild(historyItem)
+
+  // const h = document.createElement('p')
+  // h.classList.add()
+  // h.innerText = `
+  //   ${new Date().toLocaleDateString()}  
+  // `
+  // const p = document.createElement('p')
+  // p.classList.add('w-10/12', 'mx-auto', 'text-3xl', 'font-bold', 'border-2', 'p-3', 'my-5')
+  // p.innerText = `
+  // ${addMoneyNumber} Taka Donate for Flood at Noakhali, Bangladesh
+  // `;
+  // document.getElementById('transaction-container').appendChild(h)
+  // document.getElementById('transaction-container').appendChild(p)
 })
 
