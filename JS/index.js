@@ -1,6 +1,6 @@
 // blog button to faq page
 function myFunction() {
-  location.href = "/faq.html";
+  location.href = "./faq.html";
 }
 
 // btn active
@@ -181,5 +181,3 @@ document.getElementById('btn-add-money-Quota').addEventListener('click', functio
   `
   document.getElementById('transaction-container').appendChild(historyItem)
 })
-
-
